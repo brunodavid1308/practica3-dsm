@@ -1,0 +1,45 @@
+html(lang=es)
+	head
+		title=!modelo
+		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", rel='stylesheet')
+
+	body
+		nav.navbar.navbar-expand-sm.navbar-dark.bg-primary
+			a.navbar-brand.d-none.d-sm-block(href='#')
+				img.img-fluid.float-right(src="logo.png")
+			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#Barnav', aria-controls="Barnav",aria-expanded="false",aria-label="Toggle navigation")
+				span.navbar-toggler-icon
+			
+			#Barnav.collapse.navbar-collapse
+				ul.navbar-nav.mr-auto
+					li.nav-item
+						a.nav-link(href='index.html') Portada
+					li.nav-item
+						a.nav-link(href='about.html') Sobre la empresa
+					li.nav-item
+						a.nav-link(href='productos.html') Productos
+					li.nav-item.active
+						a.nav-link(href='contacto.html') Contacto
+					li.nav-item
+						a.nav-link(href='webserve.html') Web Services				
+			
+		.container
+			div
+				h1.text-center.mt-3!='Gracias por su tiempo'
+			div
+				h2.text-center.mt-3!='Datos del formulario'
+			div.text-center.mt-3
+				p Nombre: #{nombre}
+				p Apellido: #{apellido}
+				p Edad: #{edad}
+				p Género: #{genero}			
+				p Ciudad: #{ciudad}
+				p Provincia: #{provincia}
+				p Codigo: #{codigo}
+				p Email: #{email}
+				p Direccion: #{direccion}
+			
+		block scripts
+			script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js")
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
+			script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
