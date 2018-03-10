@@ -1,4 +1,5 @@
 var express = require('express');
+var port = process.env.PORT || 3000;
 var app=express();
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -89,4 +90,4 @@ app.get('/webserve/3',function(request,response){
 	response.json(articulo);
 });
 
-app.listen(8080);
+app.listen(port);
